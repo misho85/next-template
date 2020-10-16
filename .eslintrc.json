@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2020, // Allows for the parsing of modern ECMAScript features
     "sourceType": "module", // Allows using import/export statements
@@ -9,6 +10,17 @@
   "settings": {
     "react": {
       "version": "detect" // Automatically detect the react version
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["~lib", "./lib"],
+          ["~pages", "./pages"],
+          ["~styles", "./styles"],
+          ["~components", "./components"]
+        ],
+        "extensions": [".js", ".jsx", ".json"]
+      }
     }
   },
   "env": {
@@ -19,9 +31,12 @@
   "plugins": ["prettier", "simple-import-sort"],
   "extends": [
     "eslint:recommended",
+    "airbnb",
+    "airbnb/hooks",
     "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended",
     "prettier",
     "plugin:prettier/recommended"
   ],
@@ -29,6 +44,8 @@
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
     "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
     "simple-import-sort/sort": "error",
     "jsx-a11y/anchor-is-valid": [
       "error",

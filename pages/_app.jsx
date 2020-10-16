@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import * as gtag from '~lib/gtag';
-import { GlobalStyle, theme } from '~styles/.';
+import { GlobalStyle, theme } from '~styles';
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();

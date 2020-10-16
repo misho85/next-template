@@ -1,8 +1,7 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-// import FavIcon from "../assets/image/favicon.png";
-import { GA_TRACKING_ID } from '../lib/gtag';
+import { GA_TRACKING_ID } from '~lib/gtag';
 
 export default class CustomDocument extends Document {
   static async getInitialProps(ctx) {

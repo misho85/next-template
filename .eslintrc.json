@@ -28,7 +28,7 @@
     "browser": true, // Enables require() and define() as global variables as per the amd spec.
     "node": true // Enables Node.js global variables and Node.js scoping.
   },
-  "plugins": ["prettier", "simple-import-sort"],
+  "plugins": ["react", "react-hooks", "prettier", "simple-import-sort"],
   "extends": [
     "eslint:recommended",
     "airbnb",
